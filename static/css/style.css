@@ -70,3 +70,99 @@ li:hover{
 .about-card ul {
     padding-left: 18px;
 }
+
+.contact-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 28px;
+    color: #0d6efd;
+    margin-bottom: 50px;
+}
+
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.contact-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background: #0d6efd;
+    transition: width 0.3s ease;
+}
+
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.contact-card:hover .card-line {
+    width: 100%;
+}
+
+
+.contact-card h3 {
+    margin-bottom: 15px;
+    color: #0d6efd;
+}
+
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    height:38px;
+    resize:none;
+}
+
+form button {
+    background: #0d6efd;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+
+.contact-card p {
+    color: #555;
+    line-height: 1.6;
+}

@@ -1,9 +1,51 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-Contact
+Contact | City Hospital
 {% endblock %}
 
 {% block content %}
-<h1>Contact Page</h1>
+
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+<div class="contact-container">
+
+    <h2 class="page-title">Contact City Hospital</h2>
+
+    <div class="contact-grid">
+
+     
+        <div class="contact-card">
+            <span class="card-line"></span>
+            <h3>Hospital Info</h3>
+            <p><strong>Address:</strong> Main Street, Health City, India</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Email:</strong> contact@cityhospital.com</p>
+            <p><strong>Emergency:</strong> 24/7 - +91 01234 56789</p>
+        </div>
+
+       
+        <div class="contact-card">
+            <span class="card-line"></span>
+            <h3>Send Us a Message</h3>
+            <form method="post" action="">
+                {% csrf_token %}
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
 {% endblock %}
