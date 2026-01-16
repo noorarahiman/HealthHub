@@ -1,19 +1,25 @@
 from django import forms
-
-from . models import Booking 
+from .models import Booking
 
 
 class DateInput(forms.DateInput):
     input_type = 'date'
+
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = '__all__'
+        fields = '_all_'
 
+        
         widgets = {
-            'booking_date': DateInput()
+            'p_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'p_phone': forms.TextInput(attrs={'class': 'form-control'}),
+            'p_email': forms.EmailInput(attrs={'class': 'form-control'}),
+            'doc_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'booking_date': DateInput(attrs={'class': 'form-control'}),
         }
 
+        
         labels = {
             'p_name': "Patient Name:",
             'p_phone': "Patient Phone:",
