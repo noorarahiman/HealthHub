@@ -1,9 +1,56 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}
-About
-{% endblock %}
+{% block title %}About | City Hospital{% endblock %}
 
 {% block content %}
-<h1>About Page</h1>
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+<div class="about-container">
+
+    <h2 class="page-title">About City Hospital</h2>
+
+    <div class="about-grid">
+
+        <div class="about-card">
+            <span class="card-line"></span>
+            <h3>Who We Are</h3>
+            <p>
+                City Hospital is a professional healthcare institution focused on
+                delivering high-quality medical services with trust, safety, and care.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <span class="card-line"></span>
+            <h3>Our Mission</h3>
+            <p>
+                To provide affordable, ethical, and patient-centered healthcare
+                supported by experienced doctors and modern facilities.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <span class="card-line"></span>
+            <h3>Our Vision</h3>
+            <p>
+                To become a trusted hospital known for excellence in treatment,
+                innovation in healthcare, and patient satisfaction.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <span class="card-line"></span>
+            <h3>Why Choose Us</h3>
+            <ul>
+                <li>Experienced medical professionals</li>
+                <li>Advanced medical departments</li>
+                <li>Easy online appointment system</li>
+                <li>24/7 emergency care</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
 {% endblock %}
