@@ -5,15 +5,15 @@ Booking
 {% endblock %}
 
 {% block content %}
-<h1 class="text-center">Make an Appointment</h1>
+<h1 class="text-center my-4">Make an Appointment</h1>
 <hr>
-<div class="container w-50 p-3 my-5 bg-info rounded">
+<div class="container w-50 p-4 my-5 bg-light rounded shadow">
     <form action="" method="POST">
         {% csrf_token %}
         {% for field in form %}
-        <div class="mb-3 text-start">
+        <div class="mb-3 field-box p-3 rounded">
             <label class="form-label fw-bold">{{ field.label }}</label>
-            {{ field|add_class:"form-control" }}
+            {{ field }}  <!-- No crispy_forms or add_class -->
             {% if field.errors %}
                 <div class="text-danger">{{ field.errors }}</div>
             {% endif %}

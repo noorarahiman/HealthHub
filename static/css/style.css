@@ -166,3 +166,15 @@ form button:hover {
     color: #555;
     line-height: 1.6;
 }
+
+.field-box {
+    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+}
+
+.field-box:hover {
+    background-color: #0dcaf0; 
+    border-color: #0dcaf0;
+    color: white;
+}
