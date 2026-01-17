@@ -1,17 +1,19 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Department
+Departments
 {% endblock %}
 
 {% block content %}
-<h1 class="text-centre"> Our Departments </h1>
-<hr>
-
-{% for d in dept %}
-<div class="mx-auto w-50 bg-success text-centre text-white p-3 my-5 border-warning rounded">
-    <h1>{{ d.dep_name }}</h1>
-    <p>{{ d.dep_description }}</p>
+<h2 class="text-center mb-4">Our Departments</h2>
+<div class="row g-4">
+    {% for d in dept %}
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card p-3 h-100 border-primary shadow-sm">
+            <h4 class="text-center text-primary">{{ d.dep_name }}</h4>
+            <p class="text-center">{{ d.dep_description }}</p>
+        </div>
+    </div>
+    {% endfor %}
 </div>
-{% endfor %}
 {% endblock %}
