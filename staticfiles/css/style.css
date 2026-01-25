@@ -178,3 +178,7 @@ form button:hover {
     border-color: #0dcaf0;
     color: white;
 }
+
+.carousel-fade .carousel-item {
+    transition: opacity 0.6s ease-in-out;
+}
