@@ -178,3 +178,22 @@ form button:hover {
     border-color: #0dcaf0;
     color: white;
 }
+
+service-card {
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.service-card {
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
