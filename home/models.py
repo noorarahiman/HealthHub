@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Departments (models.Model):
+class Departments(models.Model):
     dep_name = models.CharField(max_length=100)
     dep_description = models.TextField()
 
@@ -16,14 +16,16 @@ class Doctors(models.Model):
     doc_image = models.ImageField(upload_to='doctors')
 
     def __str__(self):
-        return 'Dr'  + self.doc_name + '   -  (' + self.doc_spec + ')'
+        return f'Dr {self.doc_name} - {self.doc_spec}'  # Fixed: removed doc_id
 
 class Booking(models.Model):
     p_name = models.CharField(max_length=255)
-    p_phone = models.CharField(max_length=10)
+    p_phone = models.IntegerField(max_length=10)
     p_email = models.EmailField()
-    doc_name = models.ForeignKey(Doctors,on_delete=models.CASCADE)
+    doc_name = models.ForeignKey(Doctors, on_delete=models.CASCADE)
     booking_date = models.DateField()
     booked_on = models.DateField(auto_now=True)
 
+    def __str__(self):
+        return f'{self.p_name} - {self.doc_name.doc_name}'
     
